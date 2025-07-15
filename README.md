@@ -3,16 +3,16 @@
 
 ---
 
-This is the official code accompanying the Spotlight paper at ICML 2025:
-
 [![ICML 2025](https://img.shields.io/badge/ICML%202025-spotlight-blue.svg)](https://icml.cc/virtual/2025/events/2025SpotlightPosters)
 [![arXiv](https://img.shields.io/badge/arXiv-2502.09609-b31b1b.svg)](https://arxiv.org/abs/2502.09609)
 [![OpenReview](https://img.shields.io/badge/OpenReview-accepted-blue.svg)](https://openreview.net/forum?id=zk5k2NQcEA)
 
+
+This is the official code accompanying the *Spotlight* (top 2.6\%) paper at ICML 2025:
+
 **Score-of-Mixture Training: Training One-Step Generative Models Made Simple via Score Estimation of Mixture Distributions** 
 
-*Tejas Jayashankar, Jongha (Jon) Ryu and Gregory Wornell*
-
+[Tejas Jayashankar](https://tejasjayashankar.github.io/)*, [Jongha (Jon) Ryu](https://jongharyu.github.io/)*, and [Gregory Wornell](https://web.mit.edu/gww/www/) (MIT EECS)
 ![Score of Mixture Training (SMT) Overview](figures/smt-scratch.png)
 
 
@@ -95,21 +95,15 @@ script refer to the [DMD2 README](https://github.com/tianweiy/DMD2/blob/main/exp
 If you find this code useful, please consider citing our paper:
 
 ```bibtex
-@inproceedings{jayashankar2025score,
-  title={Score-of-Mixture Training: Training One-Step Generative Models Made Simple via Score Estimation of Mixture Distributions},
-  author={Jayashankar, Tejas and Ryu, J Jon and Wornell, Gregory},
-  journal={International Conference on Machine Learning (ICML)},
-  year={2025}
+@inproceedings{jayashankar2025scoreofmixture,
+  title={Score-of-Mixture Training: One-Step Generative Model Training Made Simple via Score Estimation of Mixture Distributions},
+  author={Tejas Jayashankar and Jongha Jon Ryu and Gregory W. Wornell},
+  booktitle={Forty-second International Conference on Machine Learning (ICML)},
+  year={2025},
+  url={https://openreview.net/forum?id=zk5k2NQcEA}
 }
 ```
 
 ## Acknowledgements
 
-This work was supported in part by the MIT-IBM Watson AI
-Lab under Agreement No. W1771646, by MIT Lincoln Laboratory, by ONR under Grant No. N000014-23-1-2803, and
-by the Department of the Air Force Artificial Intelligence
-Accelerator under Cooperative Agreement No. FA875019-2-1000. The views and conclusions contained in this
-document are those of the authors and should not be interpreted as representing the official policies, either expressed
-or implied, of the Department of the Air Force or the U.S.
-Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes
-notwithstanding any copyright notation herein.
+This work was supported in part by the MIT-IBM Watson AI Lab under Agreement No. W1771646, by MIT Lincoln Laboratory, by ONR under Grant No. N000014-23-1-2803, and by the Department of the Air Force Artificial Intelligence Accelerator under Cooperative Agreement No. FA875019-2-1000. The views and conclusions contained in this project are those of the authors and should not be interpreted as representing the official policies, either expressed or implied, of the Department of the Air Force or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation herein.
