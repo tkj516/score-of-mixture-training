@@ -1,0 +1,37 @@
+accelerate==0.23.0
+anyio
+clean-fid
+clip-anytorch
+datasets
+dctorch
+diffusers
+einops
+evaluate
+git+https://github.com/openai/CLIP.git
+gradio
+huggingface-hub==0.22.0
+image-reward
+imageio
+jsonmerge
+kornia
+lmdb
+lpips
+matplotlib
+numpy==1.26.4
+open_clip_torch
+opencv-python
+peft
+piq==0.7.0
+Pillow
+safetensors
+scikit-image
+scipy
+torch>=2.1
+# torch==2.0.1
+torchdiffeq
+torchsde
+# torchvision==0.15.2
+torchvision
+tqdm
+transformers
+wandb
