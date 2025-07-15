@@ -1,7 +1,11 @@
 export CHECKPOINT_PATH=$1
 export UPDATE_RATIO=${2:-5}
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 torchrun --nproc_per_node 7 --nnodes 1 main/sjsd_gan/train_sjsd_dist.py \
+export WANDB_API_KEY=""
+export WANDB_ENTITY=""
+export WANDB_PROJECT="one-step-generation"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 torchrun --nproc_per_node 7 --nnodes 1 main/sjsd_dist/train_sjsd_dist.py \
     --generator_lr 5e-5  \
     --guidance_lr 5e-5  \
     --train_iters 400000 \

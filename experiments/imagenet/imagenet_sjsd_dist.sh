@@ -1,7 +1,11 @@
 export CHECKPOINT_PATH=$1
 export UPDATE_RATIO=${2:-5}
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 torchrun --nproc_per_node 7 --nnodes 1 main/sjsd_gan/train_sjsd_dist.py \
+export WANDB_API_KEY=""
+export WANDB_ENTITY=""
+export WANDB_PROJECT="one-step-generation"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 torchrun --nproc_per_node 7 --nnodes 1 main/sjsd_dist/train_sjsd_dist.py \
     --generator_lr 2e-6  \
     --guidance_lr 2e-6  \
     --train_iters 400000 \
@@ -36,12 +40,12 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6 torchrun --nproc_per_node 7 --nnodes 1 main/s
 sleep 600
 
 # Find the latest folder under the specified directory
-LATEST_FOLDER=$(ls -d /home/tejasj/nobackup/alpha-skew-jsd/runs/imagenet_test/imagenet_lr2e-6_sjsd_gan/*/ | sort -n | tail -n 1)
+LATEST_FOLDER=$(ls -d /home/tejasj/nobackup/alpha-skew-jsd/runs/imagenet_test/imagenet_sjsd_dist/*/ | sort -n | tail -n 1)
 
 # Run the test command with the latest folder
 CUDA_VISIBLE_DEVICES=7 python main/sjsd/test_folder_edm.py \
     --folder "$LATEST_FOLDER" \
-    --wandb_name test_imagenet_lr2e-6_sjsd_gan \
+    --wandb_name test_imagenet_sjsd_dist\
     --wandb_project one-step-generation \
     --resolution 64 \
     --label_dim 1000 \
