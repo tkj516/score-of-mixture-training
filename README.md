@@ -10,11 +10,15 @@
 
 This is the official code accompanying the *Spotlight* (top 2.6\%) paper at ICML 2025:
 
-**Score-of-Mixture Training: Training One-Step Generative Models Made Simple via Score Estimation of Mixture Distributions** 
+**Score-of-Mixture Training: Training One-Step Generative Models Made Simple via Score Estimation of Mixture Distributions** \
+*[Tejas Jayashankar](https://tejasjayashankar.github.io/)\*, [Jongha (Jon) Ryu](https://jongharyu.github.io/)\*, and [Gregory Wornell](https://web.mit.edu/gww/www/)*\
+MIT EECS
 
-[Tejas Jayashankar](https://tejasjayashankar.github.io/)*, [Jongha (Jon) Ryu](https://jongharyu.github.io/)*, and [Gregory Wornell](https://web.mit.edu/gww/www/) (MIT EECS)
 ![Score of Mixture Training (SMT) Overview](figures/smt-scratch.png)
 
+The *Score-of-Mixture Training (SMT)* framework enables training of a **high-quality**, **one-step** image generative model **from scratch** (i.e., without pretrained diffusion models)!
+
+(We also support *distillation* when we are given a pretrained diffusion model.)
 
 **Note: This code is being actively developed.  Please check back for updates.**
 
