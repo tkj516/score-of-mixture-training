@@ -57,7 +57,7 @@ class Trainer:
                 )
                 os.makedirs(self.cache_dir, exist_ok=False)
 
-        self.model = SJSDGANUniModel(args, accelerator)
+        self.model = SJSDDistUniModel(args, accelerator)
         self.dataset_name = args.dataset_name
         self.real_image_path = args.real_image_path
 
