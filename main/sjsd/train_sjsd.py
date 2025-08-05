@@ -686,7 +686,7 @@ def parse_args():
         "--lr_scheduler_guidance", type=str, default="constant_with_warmup"
     )
     parser.add_argument("--lr_scheduler", type=str, default="constant_with_warmup")
-    parser.add_argument("--initialie_generator", action="store_true")
+    parser.add_argument("--initialize_generator", action="store_true")
     parser.add_argument("--checkpoint_path", type=str, default=None)
     parser.add_argument(
         "--local_rank",
