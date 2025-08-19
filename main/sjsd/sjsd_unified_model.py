@@ -24,7 +24,7 @@ class SJSDUniModel(nn.Module):
         self.guidance_min_step = self.guidance_model.min_step
         self.guidance_max_step = self.guidance_model.max_step
 
-        if args.initialie_generator:
+        if args.initialize_generator:
             self.feedforward_model = get_edm_network(args)
             self.feedforward_model.load_state_dict(load_edm_model(args), strict=True)
             del self.feedforward_model.model.map_augment
