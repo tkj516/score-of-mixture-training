@@ -268,7 +268,7 @@ class SJSDGuidance(nn.Module):
             weight_factor = weight_factor * norm_ratio
 
             # alpha-JSD
-            grad = (p_alpha - p_0) * weight_factor
+            grad = (p_alpha - p_0) / weight_factor
 
             grad = torch.nan_to_num(grad)
 
